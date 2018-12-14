@@ -4,6 +4,7 @@ from customer import Customer
 from addHandler import AddHandler
 from delHandler import DelHandler
 from getHandler import GetHandler
+from exitHandler import ExitHandler
 import pdb
 #pdb.set_trace()
 customers  = Customer()
@@ -18,6 +19,7 @@ def make_app():
         (r"/v1/addcustomer", AddHandler, dict(customers = customers)),
         (r"/v1/delcustomer", DelHandler, dict(customers = customers)),
         (r"/v1/getcustomers", GetHandler, dict(customers = customers)),
+        (r"/v1/exit", ExitHandler, dict(customers = customers)),
         ])
 
 if __name__ == "__main__":
