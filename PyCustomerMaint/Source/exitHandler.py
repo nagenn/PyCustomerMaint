@@ -1,11 +1,13 @@
 import tornado.web
-#from customer import Customer
+import os
 import json
-import sys
+
 
 
 class ExitHandler(tornado.web.RequestHandler):
-   #def initialize(self, customers):
-    #self.customers = customers
+    def initialize(self):
+       print("Thank you for using the Customer Maintenance program")
         
-    sys.exit()
+    def get(self):
+        os._exit(0)
+

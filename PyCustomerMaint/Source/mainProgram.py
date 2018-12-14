@@ -19,7 +19,7 @@ def make_app():
         (r"/v1/addcustomer", AddHandler, dict(customers = customers)),
         (r"/v1/delcustomer", DelHandler, dict(customers = customers)),
         (r"/v1/getcustomers", GetHandler, dict(customers = customers)),
-        (r"/v1/exit", ExitHandler, dict(customers = customers)),
+        (r"/v1/exit", ExitHandler),
         ])
 
 if __name__ == "__main__":
