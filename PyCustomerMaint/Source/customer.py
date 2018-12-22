@@ -1,3 +1,4 @@
+
 import json
 #from Carbon.Aliases import false
 
@@ -31,4 +32,5 @@ class Customer:
 
     def json_list(self):
         return json.dumps(self.customers)
+
             
